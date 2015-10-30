@@ -1,0 +1,32 @@
+To do:
+	1. work with api to figure out what i need for searches
+	
+	3. figure out if apis exist to generate county fips codes of surronding counties and scientific names from probable name keywords
+	
+	2. try and return every sighting as a lat and long in current county
+
+	4. create basic express routing
+
+	5. make sure routes work properly 
+
+	6. generate views for splash, login/signup, search form, and results map 
+
+	7. start sequelize
+
+	8.create models
+
+	9. generate dbTests
+
+	10. integrate database
+
+	11. map generation
+
+	12. authentication
+
+	13. assets
+
+	14. styling
+
+	15. add in sightings functionality
+
+	16. add in most wanted module

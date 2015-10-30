@@ -1,0 +1,7 @@
+BISON API
+ARKive
+uname (if not dead)?
+county fips api?
+cloudinary
+location generation
+oath
