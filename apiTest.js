@@ -8,7 +8,18 @@ router.get('/', function(req, res) {
 		function(error, response, body) {
 			if(!error && response.statusCode === 200) {
 				var data = JSON.parse(body);
-				res.send(data)
+				var arr = [];
+				var animals = data.data;
+				var noSpecimens = animals.filter(function (animal){
+					if (animal.basis === 'Observation') {
+						arr.push({lat:animal.decimalLatitude, long:animal.decimalLongitude});
+						return true
+					}
+					else {
+						return false
+					}
+				})
+				res.send(arr)
 			}	
 		}
 	);
