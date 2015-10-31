@@ -2,6 +2,29 @@ BISON API
 ARKive
 uname (if not dead)?
 county fips api?
+	counties: {
+	'King': 53033,
+	'surronding':[
+			{Pierce: 53053},
+			{Snohomish:53061},
+			{Kitsap:},
+			{Chelan:},
+			{Kittitas:},
+			{Yakima:}
+		],
+	'restOfState' : [
+			{Adams:}
+			{Asotin:}
+			{Benton:}
+			{Clallam:}
+			{Clark:}
+			{Columbia:}
+			{Cowlitz:}
+			{Douglas:}
+			{Ferry:}
+			etc
+		]
+	}
 cloudinary
 location generation
 oath

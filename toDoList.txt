@@ -1,9 +1,9 @@
 To do:
-	1. work with api to figure out what i need for searches
+//	1. work with api to figure out what i need for searches, wtf ITS(naming) and centoid mean, start with just county or state
 	
-	3. figure out if apis exist to generate county fips codes of surronding counties and scientific names from probable name keywords
+	2. //igure out if apis exist to generate county fips codes of surronding counties and scientific names from probable name keywords (just search by common_name for now)
 	
-	2. try and return every sighting as a lat and long in current county
+	3. try and return every sighting as a lat and long in current county
 
 	4. create basic express routing
 
