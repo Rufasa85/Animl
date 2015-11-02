@@ -13,9 +13,9 @@ To do:
 
 	6.// generate views for splash, login/signup, search form, and results map 
 
-	7. start sequelize
+	7. //start sequelize
 
-	8.create models
+	8. //create user model
 
 	9. generate dbTests
 

@@ -4,16 +4,21 @@ module.exports = function(sequelize, DataTypes) {
     email: {
       type: DataTypes.STRING,
       validate: {
-        isEmail:true
+        isEmail:true,
       }
-    }
+    },
     password: {
       type: DataTypes.STRING,
       validate: {
         len: [8,99]
       }
+    },
+    county: {
+      type: DataTypes.INTEGER,
+      validate: {
+        len: [5]
+      }
     }
-    county: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {
