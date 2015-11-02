@@ -7,11 +7,11 @@ To do:
 
 	4.// zip2fips?
 
-	4. create basic express routing
+	4.// create basic express routing
 
-	5. make sure routes work properly 
+	5.// make sure routes work properly 
 
-	6. generate views for splash, login/signup, search form, and results map 
+	6.// generate views for splash, login/signup, search form, and results map 
 
 	7. start sequelize
 
@@ -19,11 +19,11 @@ To do:
 
 	9. generate dbTests
 
+	12. authentication
+
 	10. integrate database
 
 	11. map generation
-
-	12. authentication
 
 	13. assets
 

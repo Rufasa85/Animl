@@ -1,17 +1,21 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
 var request = require('request');
 //api testing
 var apiTest = require('./apiTest.js');
 //zip code to fips code testing
 var zip2Fips = require('./zip2fipsTest.js');
 var searchController= require('./controllers/search.js');
-
 var ejsLayouts = require('express-ejs-layouts');
+
+//middlewarez
+app.use('/', express.static(__dirname + '/static/'));
 app.use(ejsLayouts);
+app.use(bodyParser.urlencoded({extended: false}));
+
 app.set('view engine', 'ejs');
 
-app.use('/', express.static(__dirname + '/static/'));
 
 app.get('/', function(req, res) {
 	res.render('index')
