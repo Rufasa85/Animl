@@ -19,15 +19,17 @@ To do:
 
 	9. //generate dbTests
 
-	12. authentication
+	12. //authentication
 
-	10. integrate database
+	10. //integrate database
 
 	11. map generation
 
 	13. assets
 
 	14. styling & customize alerts
+
+	15. DEPLOY
 
 	15. add in sightings functionality
 
