@@ -17,7 +17,7 @@ To do:
 
 	8. //create user model
 
-	9. generate dbTests
+	9. //generate dbTests
 
 	12. authentication
 
@@ -27,7 +27,7 @@ To do:
 
 	13. assets
 
-	14. styling
+	14. styling & customize alerts
 
 	15. add in sightings functionality
 
