@@ -5,8 +5,36 @@
 		<link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<script src="//code.jquery.com/jquery.js"></script>
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
+	<nav class="navbar navbar-default" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/">Animl!</a>
+		</div>
+	
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="#">My sightings</a></li>
+				<li><a href="#">Add a sighting!</a></li>
+				<li><a href="#">Wishlist</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/animalsearch">Find some animals</a></li>
+				<li><a href="/mostwanted">Most Wanted</a></li>
+				<li><a href="/signup">Sign up</a></li>
+				<li><a href="/login">Login</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav>
 		<div class="container">
 			<%- body %>
 		</div>
