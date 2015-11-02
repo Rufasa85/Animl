@@ -20,6 +20,9 @@
     "ejs": "~2.3.4",
     "body-parser": "~1.14.1",
     "express": "~4.13.3",
-    "request": "~2.65.0"
+    "request": "~2.65.0",
+    "pg-hstore": "~2.3.2",
+    "pg": "~4.4.3",
+    "sequelize": "~3.13.0"
   }
 }
