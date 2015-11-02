@@ -3,7 +3,9 @@ To do:
 	
 	2. //igure out if apis exist to generate county fips codes of surronding counties and scientific names from probable name keywords (just search by common_name for now)
 	
-	3. try and return every sighting as a lat and long in current county
+	//3. try and return every sighting as a lat and long in current county
+
+	4. zip2fips?
 
 	4. create basic express routing
 

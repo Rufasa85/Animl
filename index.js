@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var request = require('request');
 var apiTest = require('./apiTest.js');
+var zip2Fips = require('./zip2fipsTest.js')
 
 var ejsLayouts = require('express-ejs-layouts');
 app.use(ejsLayouts);
@@ -14,6 +15,7 @@ app.get('/', function(req, res) {
 });
 
 app.use('/test', apiTest)
+app.use('/zip', zip2Fips)
 	
 
 app.listen(3000);

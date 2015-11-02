@@ -8,7 +8,7 @@ router.get('/', function(req, res) {
 		function(error, response, body) {
 			if(!error && response.statusCode === 200) {
 				var data = JSON.parse(body);
-				var arr = [];
+				var sightings = [];
 				var animals = data.data;
 				var noSpecimens = animals.filter(function (animal){
 					if (animal.basis === 'Observation') {
@@ -19,7 +19,7 @@ router.get('/', function(req, res) {
 						return false
 					}
 				})
-				res.send(arr)
+				res.send(sightings)
 			}	
 		}
 	);

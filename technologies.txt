@@ -2,6 +2,7 @@ BISON API
 ARKive
 uname (if not dead)?
 county fips api?
+zip 2 fips?
 	counties: {
 	'King': 53033,
 	'surronding':[
