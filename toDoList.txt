@@ -32,3 +32,5 @@ To do:
 	15. add in sightings functionality
 
 	16. add in most wanted module
+
+	17. add OAuth

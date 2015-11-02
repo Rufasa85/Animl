@@ -8,11 +8,18 @@ var apiTest = require('./apiTest.js');
 var zip2Fips = require('./zip2fipsTest.js');
 var searchController= require('./controllers/search.js');
 var ejsLayouts = require('express-ejs-layouts');
+//adding sessions, attempting proper authentication
+var session = require('express-session');
 
 //middlewarez
 app.use('/', express.static(__dirname + '/static/'));
 app.use(ejsLayouts);
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(session({
+  secret: 'dsafasdpghaweoiksghvnasdpoikrhfewpui4h3298p5uy2498p5y24p9utghqw4h9e8uroyqw4e988uriythq34pru',
+  resave: false,
+  saveUninitialized: true
+}));
 
 app.set('view engine', 'ejs');
 

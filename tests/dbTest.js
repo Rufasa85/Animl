@@ -1,14 +1,9 @@
 var db = require('../models');
 
-db.user.findOrCreate({
-	where:{
-		email:'joe@joe.org' 
-	},
-	defaults :{
-		password:'pass',
+db.user.create({
+		email:'joe@joe.edu',
+		password:'passwordz',
 		county:53033
-	}
-}).spread(function (user, created) {
+}).then(function (user) {
 	console.log(user.get());
-	console.log(created);
 })
