@@ -10,6 +10,7 @@ var zip2Fips = require('./zip2fips.json');
 // //zip code to fips code testing
 // var zip2Fips = require('./zip2fipsTest.js');
 var searchController= require('./controllers/search.js');
+var sightingsController = require('./controllers/sightings.js')
 var ejsLayouts = require('express-ejs-layouts');
 //adding sessions, attempting proper authentication
 var session = require('express-session');
@@ -122,7 +123,8 @@ app.get('/logout', function(req, res) {
 	
 // app.use('/test', apiTest);
 // app.use('/zip', zip2Fips);
-app.use('/search', searchController)
+app.use('/search', searchController);
+app.use('/sightings', sightingsController);
 	
 
 app.listen(3000);

@@ -23,7 +23,8 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        // associations can be defined here
+        models.user.belongsToMany(models.animal, {through:'usersAnimals'});
+        models.user.hasMany(models.sighting)
       },
       authenticate: function(email, password, callback) {
         this.find({
