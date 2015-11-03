@@ -18,7 +18,7 @@ router.route('/').get(function(req, res){
 				var sightings = [];
 				var animals = data.data;
 				animals.forEach(function (animal){
-						sightings.push({lat:animal.decimalLatitude, long:animal.decimalLongitude});
+						sightings.push({lat:animal.decimalLatitude, lng:animal.decimalLongitude});
 				})
 				res.render('search/show', {sightings:sightings, animal:req.body.animal} )
 			}	

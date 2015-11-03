@@ -1,11 +1,8 @@
 <h1><%=sightings.length%> <%=animal%>s found near you!</h1>
-<% sightings.forEach(function(sighting){ %>
-	<div class="well">
-		<p>latitude:<%=sighting.lat%></p>
-		<p>longitude: <%=sighting.long%></p>
-	</div>
-<% }) %>
-
+<div id='mapz'></div>
+<script src="https://maps.googleapis.com/maps/api/js?&v=3.21&callback=initMap&libraries=places&key=AIzaSyDm4l11g0kW2h5HHycX7Vsgm3gcJd4czSo"></script>
+<script>var sightings = <%-JSON.stringify( sightings) %></script>
+<script type="text/javascript" src='js/map.js'></script>
 <!-- 
 <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Spiny_lumpsucker_(Eumicrotremus_orbis).jpg" class="img-responsive" alt="Image">
 <div style="background:red">

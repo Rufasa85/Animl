@@ -4,8 +4,8 @@ module.exports = function(sequelize, DataTypes) {
     userId: DataTypes.INTEGER,
     animalId: DataTypes.INTEGER,
     date: DataTypes.DATEONLY,
-    latitude: DataTypes.INTEGER,
-    longitude: DataTypes.INTEGER
+    latitude: DataTypes.FLOAT,
+    longitude: DataTypes.FLOAT
   }, {
     classMethods: {
       associate: function(models) {

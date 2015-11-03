@@ -3,9 +3,9 @@
 	<head>
 		<title></title>
 		<link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script src="//code.jquery.com/jquery.js"></script>
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
 	<nav class="navbar navbar-default" role="navigation">
@@ -27,7 +27,7 @@
 <!-- 				this will eventually link to the users page -->
 					<li><a href='/'><%=currentUser.email%></a></li>
 					<li><a href="/sightings">My sightings</a></li>
-					<li><a href="#">Add a sighting!</a></li>
+					<li><a href="/sightings/new">Add a sighting!</a></li>
 					<li><a href="#">Wishlist</a></li>
 				<% } %>
 			</ul>
