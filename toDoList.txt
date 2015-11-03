@@ -25,13 +25,19 @@ To do:
 
 	11.// map generation
 
-	15. add in sightings functionality
+	15.// add in sightings functionality
+
+	12.// use api to convert lat-lng to county fips
+
+	14. generate lat and lng from a map plugin
 
 	13. assets
 
 	14. styling & customize alerts
 
 	15. DEPLOY
+
+	18. use geolocation to center map on users current position
 
 	16. add in most wanted module
 

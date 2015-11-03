@@ -10,7 +10,7 @@ router.route('/').get(function(req, res){
 	res.render('search');
 }).post(function(req,res){
 	var county = req.body.county || zip2Fips[req.body.zip];
-	console.log(county);
+	//console.log(county);
 	var reportedSightings = [];
 	db.animal.find({
 		where:{
@@ -19,7 +19,8 @@ router.route('/').get(function(req, res){
 	}).then(function(animal){
 		db.sighting.findAll({
 			where:{
-				animalId: animal.id
+				animalId: animal.id,
+				county:county
 			}
 		}).then(function(sightings){
 			sightings.forEach(function(sighting){

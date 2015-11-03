@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     animalId: DataTypes.INTEGER,
     date: DataTypes.DATEONLY,
     latitude: DataTypes.FLOAT,
-    longitude: DataTypes.FLOAT
+    longitude: DataTypes.FLOAT,
+    county:DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {

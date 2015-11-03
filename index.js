@@ -6,7 +6,7 @@ var db = require('./models');
 //allows me to accept zipcode, return county FIPS code for use in the BISON API
 var zip2Fips = require('./zip2fips.json');
 //api testing
-// var apiTest = require('./apiTest.js');
+ var apiTest = require('./tests/apiTest.js');
 // //zip code to fips code testing
 // var zip2Fips = require('./zip2fipsTest.js');
 var searchController= require('./controllers/search.js');
@@ -121,7 +121,7 @@ app.get('/logout', function(req, res) {
 	res.redirect('/')
 });
 	
-// app.use('/test', apiTest);
+ app.use('/test', apiTest);
 // app.use('/zip', zip2Fips);
 app.use('/search', searchController);
 app.use('/sightings', sightingsController);
