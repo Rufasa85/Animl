@@ -18,7 +18,7 @@ var session = require('express-session');
 var flash = require('connect-flash');
 
 //middlewarez
-app.use('/', express.static(__dirname + '/static/'));
+app.use('/', express.static(__dirname + '/static'));
 app.use(ejsLayouts);
 app.use(bodyParser.urlencoded({extended: false}));
 //generating sessions

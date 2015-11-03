@@ -1,6 +1,4 @@
 var map;
-console.log(reportedSightings)
-
 function initMap() {
 	map = new google.maps.Map(document.getElementById("mapz"), {
 		center: {lat:parseFloat(sightings[0].lat), lng:parseFloat(sightings[0].lng)},
