@@ -2,7 +2,9 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var request = require('request');
-var db = require('./models')
+var db = require('./models');
+//allows me to accept zipcode, return county FIPS code for use in the BISON API
+var zip2Fips = require('./zip2fips.json');
 //api testing
 // var apiTest = require('./apiTest.js');
 // //zip code to fips code testing
@@ -65,13 +67,14 @@ app.route('/signup').get(function(req, res) {
 			res.redirect('/signup');
 		}
 		else{
+			var county = zip2Fips[req.body.zipcode];
 			db.user.findOrCreate({
 				where: {
 					email:req.body.email
 				},
 				defaults: {
 					password: req.body.password,
-					name: req.body.username
+					county: county
 				}
 			}).spread(function(user, created){
 				if(created) {

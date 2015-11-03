@@ -2,14 +2,17 @@
 	<legend>Find some animals</legend>
 
 	<div class="form-group">
-		<label for="name">animal name</label>
-		<input type="text" class="form-control" id="name" name='name'>
+		<label for="amimal">animal name</label>
+		<input type="text" class="form-control" id="animal" name='animal'>
 	</div>
-
-	<div class="form-group">
-		<label for="zip">zip code</label>
-		<input type="number" class="form-control" id="zip" name='zip'>
-	</div>
+	<% if (!currentUser) { %>
+		<div class="form-group">
+			<label for="zip">zip code</label>
+			<input type="number" class="form-control" id="zip" name='zip'>
+		</div>
+	<% } else {%>
+		<input type = 'hidden' name = 'county' value = <%= currentUser.county%> >
+	<% } %>
 
 	<button type="submit" class="btn btn-primary">Submit</button>
 </form>

@@ -32,12 +32,12 @@
 				<% } %>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/search">Find some animals</a></li>
 				<li><a href="/mostwanted">Most Wanted</a></li>
 				<% if (!currentUser) { %>
 					<li><a href="/signup">Sign up</a></li>
 					<li><a href="/login">Login</a></li>
 				<% } else {%>
+					<li><a href="/search">Find some animals</a></li>
 					<li><a href="/logout">Logout</a></li>
 				<% } %>
 			</ul>

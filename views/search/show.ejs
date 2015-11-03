@@ -1,6 +1,13 @@
-<h1><%=animal%>s near you!</h1>
+<h1><%=sightings.length%> <%=animal%>s found near you!</h1>
+<% sightings.forEach(function(sighting){ %>
+	<div class="well">
+		<p>latitude:<%=sighting.lat%></p>
+		<p>longitude: <%=sighting.long%></p>
+	</div>
+<% }) %>
 
+<!-- 
 <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Spiny_lumpsucker_(Eumicrotremus_orbis).jpg" class="img-responsive" alt="Image">
 <div style="background:red">
 	map goes here!
-</div>
+</div> -->
