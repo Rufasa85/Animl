@@ -17,14 +17,8 @@ router.route('/').get(function(req, res){
 				var data = JSON.parse(body);
 				var sightings = [];
 				var animals = data.data;
-				var noSpecimens = animals.filter(function (animal){
-					if (animal.basis === 'Observation') {
+				animals.forEach(function (animal){
 						sightings.push({lat:animal.decimalLatitude, long:animal.decimalLongitude});
-						return true
-					}
-					else {
-						return false
-					}
 				})
 				res.render('search/show', {sightings:sightings, animal:req.body.animal} )
 			}	

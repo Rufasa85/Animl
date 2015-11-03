@@ -23,15 +23,15 @@ To do:
 
 	10. //integrate database
 
-	11. map generation
+	11.// map generation
+
+	15. add in sightings functionality
 
 	13. assets
 
 	14. styling & customize alerts
 
 	15. DEPLOY
-
-	15. add in sightings functionality
 
 	16. add in most wanted module
 
