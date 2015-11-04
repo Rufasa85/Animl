@@ -1,5 +1,9 @@
-<h1><%=sightings.length + reportedSightings.length%> <%=animal%>s found near you!</h1>
-<div id='mapz'></div>
+<h1 class='text-center'><%=sightings.length + reportedSightings.length%> <%=animal%>s found near you!</h1>
+<div class="row">
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
+		<div id='mapz'class='center-block'></div>
+	</div>
+</div>
 <script src="https://maps.googleapis.com/maps/api/js?&v=3.21&callback=initMap&libraries=places&key=+<%=process.env.GOOGLE_KEY%>"></script>
 <script>
 	var sightings = <%-JSON.stringify( sightings)%>

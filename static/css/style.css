@@ -3,8 +3,18 @@ body{
 	font-family: 'Itim', cursive;
 }
 
+hr {
+	color:#bdc3c7;
+}
+
+legend {
+	border-color: #bdc3c7;
+	font-size: 36px;
+}
+
 .container-fluid {
 	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 #mapz, #sightingsMap {
@@ -14,12 +24,6 @@ body{
 
 #last {
 	padding-right:5px;
-}
-
-.footer{
-	position:absolute;
-   bottom:0;
-   width: 100%;
 }
 
 .jumbotron {
@@ -48,4 +52,11 @@ body{
 .btn, a.btn {
 	border-radius:0;
 	margin:3px;
+	background-color: #bc3a1a;
+	border-color:#bc3a1a;
+}
+
+.btn:hover {
+	background-color: #db4e23;
+	border-color:#db4e23;
 }
