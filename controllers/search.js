@@ -7,7 +7,14 @@ var request= require('request');
 
 //route to animal search form
 router.route('/').get(function(req, res){
-	res.render('search');
+	if(req.session.user){
+		db.user.findById(req.session.user).then(function(user){	
+			res.render('search', {user:user});
+		})
+	}
+	else {
+		res.render('search', {user:false});
+	};
 }).post(function(req,res){
 	var county = req.body.county || zip2Fips[req.body.zip];
 	//console.log(county);

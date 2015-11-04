@@ -33,11 +33,19 @@ To do:
  
 	15.// update & destroy sightings
 
+	TODAY
+
 	13. assets
 
 	14. styling & customize alerts
 
 	15. DEPLOY
+
+	TOMMOROW
+
+	20. TESTING
+
+	IF TIME
 
 	18. use geolocation to center map on users current position
 

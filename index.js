@@ -30,9 +30,9 @@ app.use(session({
 //checking if user has logged in
 app.use(function(req, res, next) {
 	if (req.session.user){
-		db.user.findById(req.session.user.id).then(function(user){
+		db.user.findById(req.session.user).then(function(user){
 			if(user) {
-				req.currentUser = user;
+				req.currentUser = user.id;
 				next();
 			} else {
 				req.currentUser = false;
@@ -104,7 +104,7 @@ app.route('/login').get(function(req,res){
 					res.send(err);
 				}
 				else if (user) {
-					req.session.user = user;
+					req.session.user = user.id;
 					req.flash('success', 'You are logged in, spiffy person');
 					res.redirect("/");
 				}

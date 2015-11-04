@@ -6,7 +6,7 @@ var request = require('request');
 router.get('/', function(req,res){
 	db.sighting.findAll({
 		where:{
-			userId: req.session.user.id
+			userId: req.session.user
 		},
 		include:[db.animal]
 	}).then(function(sightings){
@@ -38,7 +38,7 @@ router.route('/new').get(function(req, res){
 					}
 				}).spread(function(animal,created){
 					animal.createSighting({
-						userId:req.session.user.id,
+						userId:req.session.user,
 						name: req.body.animal,
 						date:req.body.date,
 						latitude:req.body.latitude,
