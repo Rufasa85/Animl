@@ -26,6 +26,7 @@
     "sequelize": "~3.13.0",
     "express-session": "~1.12.1",
     "connect-flash": "~0.1.1",
-    "bcrypt": "~0.8.5"
+    "bcrypt": "~0.8.5",
+    "sequelize-cli": "~2.1.0"
   }
 }
