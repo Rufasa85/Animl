@@ -1,6 +1,6 @@
 <h1><%=sightings.length + reportedSightings.length%> <%=animal%>s found near you!</h1>
 <div id='mapz'></div>
-<script src="https://maps.googleapis.com/maps/api/js?&v=3.21&callback=initMap&libraries=places&key=AIzaSyDm4l11g0kW2h5HHycX7Vsgm3gcJd4czSo"></script>
+<script src="https://maps.googleapis.com/maps/api/js?&v=3.21&callback=initMap&libraries=places&key=+<%=process.env.GOOGLE_KEY%>"></script>
 <script>
 	var sightings = <%-JSON.stringify( sightings)%>
 	var reportedSightings= <%-JSON.stringify(reportedSightings)%>
