@@ -1,6 +1,20 @@
-<% sightings.forEach(function(sighting){ %>
-	<h3><%=sighting.animal.name %></h3>
-	<p><%=sighting.latitude%></p>
-	<p><%=sighting.longitude%></p>
-	<p><strong><%=sighting.county%></strong></p>
+<% sightings.forEach(function(sighting, idx){ %>
+	<div class="row">
+		<div class = 'col-xs-12'>	
+			<h2 class= 'text-center'><%=sighting.animal.name %></h3>
+		</div>
+	</div>
+	<div class = 'row'>
+		<div class = 'col-xs-4'>
+			<p><strong>Date: <%=dates[idx]%></strong></p>
+		</div>
+		<div class = 'col-xs-4'>
+			<p>Lat: <%=sighting.latitude%>,Long: <%=sighting.longitude%> </p>
+		</div>
+		<div class = 'col-xs-4'>
+			<a href = '/sightings/<%=sighting.id%>' class ='btn btn-info pull-right'>Edit!</a> <a href="/sightings/<%=sighting.id%>" class='btn btn-danger delete-btn pull-right'>Delete this sighting!</a>	
+		</div>
+	</div>
+	<hr>
 <% }) %>
+<script type="text/javascript" src ='/js/deleteButton.js'></script>

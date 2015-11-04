@@ -29,7 +29,9 @@ To do:
 
 	12.// use api to convert lat-lng to county fips
 
-	14. generate lat and lng from a map plugin
+	14.// generate lat and lng from a map plugin
+ 
+	15.// update & destroy sightings
 
 	13. assets
 
