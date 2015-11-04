@@ -1,3 +1,5 @@
+<h1 class='text-center'>Your sightings</h1>
+
 <% sightings.forEach(function(sighting, idx){ %>
 	<div class="row">
 		<div class = 'col-xs-12'>	
@@ -6,10 +8,10 @@
 	</div>
 	<div class = 'row'>
 		<div class = 'col-xs-4'>
-			<p><strong>Date: <%=dates[idx]%></strong></p>
+			<h4>Date: <%=dates[idx]%></h4>
 		</div>
 		<div class = 'col-xs-4'>
-			<p>Lat: <%=sighting.latitude%>,Long: <%=sighting.longitude%> </p>
+			<h4>Lat: <%=sighting.latitude.toFixed(4)%>, Long: <%=sighting.longitude.toFixed(4)%> </h4>
 		</div>
 		<div class = 'col-xs-4'>
 			<a href = '/sightings/<%=sighting.id%>' class ='btn btn-primary pull-right'>Edit!</a> <a href="/sightings/<%=sighting.id%>" class='btn btn-primary delete-btn pull-right'>Delete this sighting!</a>	
