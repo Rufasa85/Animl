@@ -4,7 +4,8 @@ body{
 }
 
 hr {
-	color:#37a28d;
+	border-top: 1px solid #bdc3c7;
+	width:80%;
 }
 
 legend {

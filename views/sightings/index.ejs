@@ -2,19 +2,32 @@
 
 <% sightings.forEach(function(sighting, idx){ %>
 	<div class="row">
-		<div class = 'col-xs-12'>	
-			<h2 class= 'text-center'><%=sighting.animal.name %></h3>
+		<div class = 'col-xs-2 col-xs-offset-1'>	
+			<h2>Animal</h2>
+		</div>
+		<div class = 'col-xs-3'>	
+			<h2>Date</h2>
+		</div>
+		<div class = 'col-xs-3'>	
+			<h2>Location</h2>
+		</div>
+		<div class = 'col-xs-2'>	
+			<h2 class='text-right'>Modify</h2>
 		</div>
 	</div>
 	<div class = 'row'>
-		<div class = 'col-xs-4'>
-			<h4>Date: <%=dates[idx]%></h4>
+		<div class = 'col-xs-2 col-xs-offset-1'>
+			<h4><%=sighting.animal.name %></h4>
+			
 		</div>
-		<div class = 'col-xs-4'>
+		<div class = 'col-xs-3'>
+			<h4><%=dates[idx]%></h4>
+		</div>
+		<div class = 'col-xs-3'>
 			<h4>Lat: <%=sighting.latitude.toFixed(4)%>, Long: <%=sighting.longitude.toFixed(4)%> </h4>
 		</div>
-		<div class = 'col-xs-4'>
-			<a href = '/sightings/<%=sighting.id%>' class ='btn btn-primary pull-right'>Edit!</a> <a href="/sightings/<%=sighting.id%>" class='btn btn-primary delete-btn pull-right'>Delete this sighting!</a>	
+		<div class = 'col-xs-2'>
+			<a href = '/sightings/<%=sighting.id%>' class ='btn btn-primary pull-right'>Edit!</a> <a href="/sightings/<%=sighting.id%>" class='btn btn-primary delete-btn pull-right'>Delete!</a>	
 		</div>
 	</div>
 	<hr>
