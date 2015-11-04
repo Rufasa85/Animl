@@ -127,4 +127,4 @@ app.use('/search', searchController);
 app.use('/sightings', sightingsController);
 	
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
