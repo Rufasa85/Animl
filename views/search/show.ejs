@@ -4,12 +4,12 @@
 		<div id='mapz'class='center-block'></div>
 	</div>
 </div>
-<script src="https://maps.googleapis.com/maps/api/js?&v=3.21&callback=initMap&libraries=places&key=+<%=process.env.GOOGLE_KEY%>"></script>
 <script>
 	var sightings = <%-JSON.stringify( sightings)%>
 	var reportedSightings= <%-JSON.stringify(reportedSightings)%>
 </script>
 <script type="text/javascript" src='/js/map.js'></script>
+<script src="https://maps.googleapis.com/maps/api/js?&v=3.21&callback=initMap&libraries=places&key=<%=process.env.GOOGLE_KEY%>"></script>
 <!-- 
 <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Spiny_lumpsucker_(Eumicrotremus_orbis).jpg" class="img-responsive" alt="Image">
 <div style="background:red">
