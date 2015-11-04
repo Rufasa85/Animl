@@ -24,16 +24,18 @@ router.route('/').get(function(req, res){
 			name: req.body.animal
 		}
 	}).then(function(animal){
-		db.sighting.findAll({
-			where:{
-				animalId: animal.id,
-				county:county
-			}
-		}).then(function(sightings){
-			sightings.forEach(function(sighting){
-				reportedSightings.push({lat:sighting.latitude, lng:sighting.longitude})
+		if(animal){
+			db.sighting.findAll({
+				where:{
+					animalId: animal.id,
+					county:county
+				}
+			}).then(function(sightings){
+				sightings.forEach(function(sighting){
+					reportedSightings.push({lat:sighting.latitude, lng:sighting.longitude})
+				})
 			})
-		})
+		}
 	})
 	request(
 		('http://bison.usgs.ornl.gov/api/search.json?species='+ req.body.animal +'&type=common_name&countyFips='+county+'&count=100'),
