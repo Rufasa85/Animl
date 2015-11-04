@@ -1,4 +1,51 @@
+body{
+	background:#1abc9c;
+	font-family: 'Itim', cursive;
+}
+
+.container-fluid {
+	margin-top: 50px;
+}
+
 #mapz, #sightingsMap {
 	height: 500px;
 	width:500px;
+}
+
+#last {
+	padding-right:5px;
+}
+
+.footer{
+	position:absolute;
+   bottom:0;
+   width: 100%;
+}
+
+.jumbotron {
+	height: 500px;
+	background-image: url(http://data.hdwallpapers.im/pig_guitar_cute_animal.jpg);
+	background-position: center;
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+	color:white;
+}
+
+.jumbotron h1, .jumbotron p {
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+
+.navbar, .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a, .footer {
+	color: white;
+	background: #95a5a6;
+	border-color:#95a5a6;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover {
+	color:#34495e;
+}
+
+.btn, a.btn {
+	border-radius:0;
+	margin:3px;
 }

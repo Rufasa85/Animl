@@ -3,48 +3,54 @@
 	<head>
 		<title></title>
 		<link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		<script src="//code.jquery.com/jquery.js"></script>
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
 	</head>
 	<body>
-	<nav class="navbar navbar-default" role="navigation">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="/">Animl!</a>
-		</div>
-	
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse navbar-ex1-collapse">
-			<ul class="nav navbar-nav">
-				<% if (currentUser) {%>
-<!-- 				this will eventually link to the users page -->
-					<li><a href="/sightings">My sightings</a></li>
-					<li><a href="/sightings/new">Add a sighting!</a></li>
-					<li><a href="#">Wishlist</a></li>
-				<% } %>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/mostwanted">Most Wanted</a></li>
-				<% if (!currentUser) { %>
-					<li><a href="/signup">Sign up</a></li>
-					<li><a href="/login">Login</a></li>
-				<% } else {%>
-					<li><a href="/search">Find some animals</a></li>
-					<li><a href="/logout">Logout</a></li>
-				<% } %>
-			</ul>
-		</div><!-- /.navbar-collapse -->
-	</nav>
-		<div class="container">
+		<div class="container-fluid">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/">Animl!</a>
+				</div>
+			
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav navbar-links">
+						<% if (currentUser) {%>
+		<!-- 				this will eventually link to the users page -->
+							<li><a href="/sightings">My sightings</a></li>
+							<li><a href="/sightings/new">Add a sighting!</a></li>
+							<li><a href="#">Wishlist</a></li>
+						<% } %>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/mostwanted">Most Wanted</a></li>
+						<% if (!currentUser) { %>
+							<li><a href="/signup">Sign up</a></li>
+							<li><a href="/login">Login</a></li>
+						<% } else {%>
+							<li><a href="/search">Find some animals</a></li>
+							<li id='last'><a href="/logout">Logout</a></li>
+						<% } %>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</nav>
 			<% include alerts %>
 			<%- body %>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 footer">
+					<h4 class='text-center'>&copy; Joe Rehfuss 2015</h4>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
