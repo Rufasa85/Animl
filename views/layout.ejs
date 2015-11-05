@@ -3,6 +3,7 @@
 	<head>
 		<title>Animl</title>
 		<link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		<script src="//code.jquery.com/jquery.js"></script>
@@ -25,6 +26,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
 					<ul class="nav navbar-nav navbar-links">
+					<li><a href="/about">About</a></li>
 						<% if (currentUser) {%>
 		<!-- 				this will eventually link to the users page -->
 							<li><a href="/sightings">My sightings</a></li>
@@ -47,7 +49,7 @@
 			<% include alerts %>
 			<%- body %>
 			<div class="navbar navbar-fixed-bottom footer">
-				<h4 class='text-center'>&copy; Joe Rehfuss 2015</h4>
+				<h4 class='text-center'>&copy; Joe Rehfuss 2015 <span><a href="https://www.linkedin.com/in/joerehfuss"><i class="fa fa-linkedin-square"></i></a><span><span><a href="https://github.com/Rufasa85"><i class = 'fa fa-github'></i></a></span></h4>
 			</div>
 		</div>
 	</body>

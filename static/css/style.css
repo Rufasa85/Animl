@@ -13,15 +13,19 @@ legend {
 	font-size: 36px;
 }
 
+span {
+	padding:5px;
+}
+
 p, #techs li, #techs li a {
 	font-size: 16px;
 }
 
-#techs li a {
+#techs li a, #projectGit{
 	color: #bc3a1a;
 }
 
-#techs li a:hover {
+#techs li a:hover, #projectGit:hover{
 	color: #34495e;
 }
 
@@ -43,8 +47,12 @@ p, #techs li, #techs li a {
 	padding-right:5px;
 }
 
+#my-info {
+	margin-top:15px;
+}
+
 #me {
-	border-radius:45%;
+	border-radius:50%;
 	width:70%;
 	height: auto;
 	float:right;
@@ -52,7 +60,7 @@ p, #techs li, #techs li a {
 
 .jumbotron {
 	height: 500px;
-	background-image: url(http://data.hdwallpapers.im/pig_guitar_cute_animal.jpg);
+	background-image: url(/assets/guitarPig.jpg);
 	background-position: center;
 	background-size:100% 100%;
 	background-repeat: no-repeat;
@@ -83,4 +91,33 @@ p, #techs li, #techs li a {
 .btn:hover {
 	background-color: #db4e23;
 	border-color:#db4e23;
+}
+
+.animalPic {
+	height:150px;
+	width:100%;
+	padding:0;
+	margin:0;
+}
+
+#seaOtter {
+	background-image: url("/assets/seaOtter.jpg");
+}
+
+#babyPanda {
+	background-image: url("/assets/babyPanda.jpg");
+	background-position: center;
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+	height: 150px;
+	margin-right: 5px;
+}
+
+#sealPhotobomb {
+	background-image: url("/assets/sealPhotobomb.jpg");
+	background-position: center;
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+	height: 150px;
+	margin-left:5px;
 }
