@@ -21,7 +21,7 @@ router.route('/').get(function(req, res){
 	var reportedSightings = [];
 	db.animal.find({
 		where:{
-			name: req.body.animal
+			name: req.body.animal.toLowerCase()
 		}
 	}).then(function(animal){
 		if(animal){
@@ -38,7 +38,7 @@ router.route('/').get(function(req, res){
 		}
 	})
 	request(
-		('http://bison.usgs.ornl.gov/api/search.json?species='+ req.body.animal +'&type=common_name&countyFips='+county+'&count=100'),
+		('http://bison.usgs.ornl.gov/api/search.json?species='+ req.body.animal.toLowerCase() +'&type=common_name&countyFips='+county+'&count=100'),
 		function(error, response, body) {
 			if(!error && response.statusCode === 200) {
 				var data = JSON.parse(body);
@@ -47,7 +47,7 @@ router.route('/').get(function(req, res){
 				animals.forEach(function (animal){
 						sightings.push({lat:animal.decimalLatitude, lng:animal.decimalLongitude});
 				})
-				res.render('search/show', {sightings:sightings, animal:req.body.animal, reportedSightings:reportedSightings} )
+				res.render('search/show', {sightings:sightings, animal:req.body.animal.toLowerCase(), reportedSightings:reportedSightings} )
 			}	
 		}
 	);

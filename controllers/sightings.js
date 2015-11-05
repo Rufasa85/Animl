@@ -31,7 +31,7 @@ router.route('/new').get(function(req, res){
 				var county = data.County.FIPS;
 				db.animal.findOrCreate({
 					where:{
-						name:req.body.animal
+						name:req.body.animal.toLowerCase()
 					},
 					defaults: {
 						wantedScore:0
@@ -39,7 +39,7 @@ router.route('/new').get(function(req, res){
 				}).spread(function(animal,created){
 					animal.createSighting({
 						userId:req.session.user,
-						name: req.body.animal,
+						name: req.body.animal.toLowerCase(),
 						date:req.body.date,
 						latitude:req.body.latitude,
 						longitude:req.body.longitude,
@@ -74,7 +74,7 @@ router.route('/:id').get(function(req,res){
 				var county = data.County.FIPS;
 				db.animal.findOrCreate({
 					where:{
-						name:req.body.animal
+						name:req.body.animal.toLowerCase()
 					},
 					defaults: {
 						wantedScore:0
