@@ -64,7 +64,7 @@ app.route('/signup').get(function(req, res) {
 	res.render('signup');
 	}).post(function(req, res){
 		if(req.body.password !== req.body.password2) {
-			req.flash("danger", "Passwords need to match yo!");
+			req.flash("danger", "Passwords do not match!");
 			res.redirect('/signup');
 		}
 		else{
@@ -79,11 +79,11 @@ app.route('/signup').get(function(req, res) {
 				}
 			}).spread(function(user, created){
 				if(created) {
-					req.flash('success', 'You are all signed up!');
+					req.flash('success', 'Sign up complete!');
 					res.redirect('/');
 				}
 				else {
-					req.flash('warning', 'That email is already in use!');
+					req.flash('warning', 'That email is already in use');
 					res.redirect('/signup');
 				}
 			}).catch(function(error){
@@ -105,7 +105,7 @@ app.route('/login').get(function(req,res){
 				}
 				else if (user) {
 					req.session.user = user.id;
-					req.flash('success', 'You are logged in, spiffy person');
+					req.flash('success', 'Welcome back');
 					res.redirect("/");
 				}
 				else {
@@ -117,7 +117,7 @@ app.route('/login').get(function(req,res){
 	});
 app.get('/logout', function(req, res) {
 	req.session.user = false;
-	req.flash('warning', 'you have logged out!')
+	req.flash('warning', 'See ya!')
 	res.redirect('/')
 });
 
