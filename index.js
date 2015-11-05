@@ -125,7 +125,10 @@ app.get('/about', function(req, res) {
 	res.render('about')
 });
 
-	
+app.get('/about/alexmac', function(req, res) {
+	res.render('alex')
+});
+		
  // app.use('/test', apiTest);
 // app.use('/zip', zip2Fips);
 app.use('/search', searchController);
