@@ -120,6 +120,11 @@ app.get('/logout', function(req, res) {
 	req.flash('warning', 'you have logged out!')
 	res.redirect('/')
 });
+
+app.get('/about', function(req, res) {
+	res.render('about')
+});
+
 	
  // app.use('/test', apiTest);
 // app.use('/zip', zip2Fips);

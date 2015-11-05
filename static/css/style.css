@@ -13,6 +13,22 @@ legend {
 	font-size: 36px;
 }
 
+p, #techs li, #techs li a {
+	font-size: 16px;
+}
+
+#techs li a {
+	color: #bc3a1a;
+}
+
+#techs li a:hover {
+	color: #34495e;
+}
+
+#techs {
+	margin-top: 20px;
+}
+
 .container-fluid {
 	margin-top: 50px;
 	margin-bottom: 50px;
@@ -25,6 +41,13 @@ legend {
 
 #last {
 	padding-right:5px;
+}
+
+#me {
+	border-radius:45%;
+	width:70%;
+	height: auto;
+	float:right;
 }
 
 .jumbotron {
