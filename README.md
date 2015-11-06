@@ -3,7 +3,7 @@
 <http://www.animl.herokuapp.com/>
 
 ### Basic Info
-Animl is a full-stack application that allows users to search for any animal they wish to see and popluates a map with all confirmed sightings of said animal in their county as reported by the USGS and other users.   
+Animl is a full-stack application that allows users to search for any animal they wish to see and populates a map with all confirmed sightings of said animal in their county as reported by the USGS and other users.   
 
 ###Technologies Used
 * Express / NodeJS
@@ -15,9 +15,9 @@ Animl is a full-stack application that allows users to search for any animal the
 * Latitude and longitude converted to county FIPS codes using the [Census Block Conversions API](https://www.fcc.gov/developers/census-block-conversions-api).
 
 ###Known Issues
-* The Census Block Conversions API does not recogize locations dropped in large bodies of water, so if, for example, a user drops a pin for an orca sighting in Puget Sound, it does not show up as a sighting in King County.
-* The Zip2FIPS project has most, but not all, zip codes included.  So some users cannot retrieve find any sightings at all.
-*The BISON API is very particular about the names of animals. Crow, for example, returns no results in King county Washington, while American Crow returns over 100. The BISON API allows for searching by scientific name, but I could not find an animal name conversion API.  
+* The Census Block Conversions API does not recognize locations dropped in large bodies of water. If, for example, a user drops a pin for an orca sighting in Puget Sound, it does not show up as a sighting in King County.
+* The Zip2FIPS project has most, but not all, zip codes included.  Some users cannot retrieve any sightings at all.
+*The BISON API is very particular about the names of animals. "Crow", for example, returns no results in King County Washington, while "American Crow" returns over one hundred. The BISON API allows for searching by scientific name, but I could not find an animal name conversion API.  
 * Excess spaces in the search fields will cause no results to be returned.
 
 ###Wishlist
