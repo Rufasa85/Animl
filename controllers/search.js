@@ -7,6 +7,10 @@ var request= require('request');
 
 //route to animal search form
 router.route('/').get(function(req, res){
+	// use res.locals.currentUSer instead
+
+	// search should be a GET, and just check for req.query.search to see if you need to
+	// actually do a search
 	if(req.session.user){
 		db.user.findById(req.session.user).then(function(user){	
 			res.render('search', {user:user});
@@ -38,7 +42,7 @@ router.route('/').get(function(req, res){
 		}
 	})
 	request(
-		('http://bison.usgs.ornl.gov/api/search.json?species='+ req.body.animal.toLowerCase() +'&type=common_name&countyFips='+county+'&count=100'),
+		('https://itunes.apple.com/search?term='+ req.body.animal.toLowerCase() +'&entity=album'),
 		function(error, response, body) {
 			if(!error && response.statusCode === 200) {
 				var data = JSON.parse(body);

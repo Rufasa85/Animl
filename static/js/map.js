@@ -9,7 +9,7 @@ function initMap() {
 	}
 	map = new google.maps.Map(document.getElementById("mapz"), {
 		center: startingPoint,
-		zoom:9
+		zoom:2
 	});
 	sightings.forEach(function(sighting){
 		var position = {lat: parseFloat(sighting.lat), lng:parseFloat(sighting.lng)};	
